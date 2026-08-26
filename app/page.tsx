@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Droplets, Zap, Wrench, Paintbrush, ShieldCheck, Leaf, Building2, MessageCircle, Menu, X } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Droplets, Zap, Wrench, Paintbrush, ShieldCheck, Leaf, Building2, MessageCircle, Facebook, Instagram, Menu, X } from 'lucide-react';
 
 const WA='5216568672099';
 const wa=(text:string)=>`https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
@@ -16,7 +16,7 @@ export default function Home(){
   <section id="nosotros" className="dark"><div className="darkIn"><div><span className="kicker">J D O SERVICES</span><h2>Mantenimiento con<br/><em>visión profesional.</em></h2></div><div className="statement"><p>Nos enfocamos en resolver, prevenir y mantener. Trabajamos para que propietarios, administradores, empresas y constructoras tengan un aliado confiable para sus necesidades de mantenimiento.</p><div className="stats"><div><b>01</b><span>Atención directa</span></div><div><b>02</b><span>Respuesta rápida</span></div><div><b>03</b><span>Seguimiento</span></div></div></div></div></section>
   <section id="proceso" className="section process"><div className="sectionHead"><div><span className="kicker">ASÍ TRABAJAMOS</span><h2>Simple. Claro.<br/><em>Profesional.</em></h2></div></div><div className="steps">{[['01','Solicitas','Cuéntanos qué necesitas.'],['02','Evaluamos','Revisamos el servicio y sus requerimientos.'],['03','Cotizamos','Te presentamos una propuesta clara.'],['04','Ejecutamos','Realizamos el trabajo con seguimiento.']].map(([n,t,d])=><div className="step" key={n}><b>{n}</b><h3>{t}</h3><p>{d}</p></div>)}</div></section>
   <section className="cta" id="contacto"><div><span className="kicker">¿NECESITAS MANTENIMIENTO?</span><h2>Hablemos de tu<br/><em>próximo servicio.</em></h2><p>Solicita información o una cotización directamente por WhatsApp.</p></div><a href={wa('Hola, quiero información sobre los servicios de J D O SERVICES.')} className="primary light"><MessageCircle/> WhatsApp 656 867 2099</a></section>
-  <footer><div className="footerIn"><div className="brand"><Image src="/logo-jdo-services.png" alt="J D O SERVICES" width={360} height={106} /></div><div><span>656 867 2099</span><span>jdoservicesresidencial@gmail.com</span></div><small>© 2026 J D O SERVICES. Todos los derechos reservados.</small></div></footer>
+  <footer><div className="footerIn"><div className="brand"><Image src="/logo-jdo-services.png" alt="J D O SERVICES" width={360} height={106} /></div><div className="footerContact"><span>656 867 2099</span><span>jdoservicesresidencial@gmail.com</span><div className="socialLinks"><a href="https://www.facebook.com/share/1BpJ1kDTvk/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook J D O SERVICES" title="Facebook"><Facebook/></a><a href="https://www.instagram.com/jdo.services?igsi=eGdwcTltaDB4NDRi" target="_blank" rel="noopener noreferrer" aria-label="Instagram J D O SERVICES" title="Instagram"><Instagram/></a></div></div><small>© 2026 J D O SERVICES. Todos los derechos reservados.</small></div></footer>
   <a className="float" href={wa('Hola, J D O SERVICES. Quiero solicitar información.') } aria-label="WhatsApp"><MessageCircle/></a>
  </main>
 }

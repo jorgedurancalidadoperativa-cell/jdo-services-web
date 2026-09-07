@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'J D O SERVICES | Mantenimiento Residencial',
+  title: 'J D O SERVICES | Mantenimiento Residencial y Comercial',
   description:
-    'J D O SERVICES ofrece mantenimiento residencial y servicios profesionales para propiedades, fraccionamientos, condominios y empresas.',
+    'J D O SERVICES ofrece mantenimiento residencial y comercial, albercas, electricidad, plomería, pintura, impermeabilización, jardinería y servicios para empresas.',
   metadataBase: new URL('https://jdo-services-web.vercel.app/'),
   alternates: {
     canonical: '/',
@@ -13,13 +13,19 @@ export const metadata: Metadata = {
     icon: '/icon.png',
   },
   openGraph: {
-    title: 'J D O SERVICES | Mantenimiento Residencial',
+    title: 'J D O SERVICES | Mantenimiento Residencial y Comercial',
     description:
-      'Mantenimiento residencial y servicios profesionales para propiedades, fraccionamientos, condominios y empresas.',
+      'Mantenimiento profesional para propiedades, residenciales, condominios, empresas y constructoras.',
     url: 'https://jdo-services-web.vercel.app/',
     siteName: 'J D O SERVICES',
     type: 'website',
     locale: 'es_MX',
+    images: [
+      {
+        url: '/logo-jdo-services.png',
+        alt: 'J D O SERVICES',
+      },
+    ],
   },
 };
 
@@ -29,12 +35,12 @@ const jsonLd = {
   '@id': 'https://jdo-services-web.vercel.app/#business',
   name: 'J D O SERVICES',
   url: 'https://jdo-services-web.vercel.app/',
-  logo: 'https://jdo-services-web.vercel.app/icon.png',
-  image: 'https://jdo-services-web.vercel.app/icon.png',
+  logo: 'https://jdo-services-web.vercel.app/logo-jdo-services.png',
+  image: 'https://jdo-services-web.vercel.app/logo-jdo-services.png',
   telephone: '+52 656 867 2099',
   email: 'jdoservicesresidencial@gmail.com',
   description:
-    'J D O SERVICES ofrece mantenimiento residencial y servicios profesionales para propiedades, fraccionamientos, condominios y empresas.',
+    'J D O SERVICES ofrece mantenimiento residencial y comercial, albercas, electricidad, plomería, pintura, impermeabilización, jardinería y servicios para empresas.',
   areaServed: [
     {
       '@type': 'City',
@@ -50,9 +56,71 @@ const jsonLd = {
     },
   ],
   sameAs: [
-    'https://www.instagram.com/jdo.services',
     'https://www.facebook.com/jdoservices1',
+    'https://www.instagram.com/jdo.services',
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Servicios de J D O SERVICES',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Mantenimiento general',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Mantenimiento de albercas',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Electricidad',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Plomería',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Pintura',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Impermeabilización',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Jardinería',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Servicios para empresas',
+        },
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
